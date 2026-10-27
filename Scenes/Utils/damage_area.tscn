@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://buenac6jt81sp"]
+
+[ext_resource type="Script" uid="uid://uqcm4iofuf2r" path="res://Scripts/damage_area.gd" id="1_p2qtj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 32.01562
+
+[node name="DamageArea" type="Area2D" unique_id=1931584909]
+collision_mask = 2
+script = ExtResource("1_p2qtj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1984396373]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=9255057]
