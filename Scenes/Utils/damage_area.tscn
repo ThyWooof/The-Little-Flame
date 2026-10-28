@@ -5,6 +5,14 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 32.01562
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"pulse",
+"speed": 5.0
+}]
+
 [node name="DamageArea" type="Area2D" unique_id=1931584909]
 collision_mask = 2
 script = ExtResource("1_p2qtj")
@@ -12,4 +20,11 @@ script = ExtResource("1_p2qtj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1984396373]
 shape = SubResource("CircleShape2D_g4v7s")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=9255057]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=946564811]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"pulse"
+
+[node name="Timer" type="Timer" parent="." unique_id=2069703585]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -23,6 +23,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 
+[global_group]
+
+player="Group for easier access to the player"
+
 [input]
 
 move_left={
@@ -55,6 +59,9 @@ pointing/emulate_touch_from_mouse=true
 2d_render/layer_1="Player"
 2d_render/layer_2="Enemy"
 2d_render/layer_3="Enviorment "
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemy"
+2d_physics/layer_3="Enviorment"
 
 [physics]
 

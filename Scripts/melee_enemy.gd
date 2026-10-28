@@ -1,30 +1,21 @@
-extends CharacterBody2D
-@export var speed: float = 0
-@onready var player = get_node("/root/Forest/Player")
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+extends BaseEnemy
 
-var health = 50
-var dead: bool = false
+@onready var player: CharacterBody2D = get_tree().get_first_node_in_group("player")
 
 func _physics_process(_delta: float) -> void:
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * speed
+	
+	if direction.x < 0:
+		sprite.flip_h = true
+	elif direction.x > 0:
+		sprite.flip_h = false
 	
 	if direction.length() > 0: 
 		if dead == false:
 			sprite.play("running")
 	
 	if dead == true: 
-		velocity = Vector2.ZERO
+		dying()
 	
 	move_and_slide()
-
-func taking_damage():
-	health -= 1
-	if health == 0:
-		dead = true
-		sprite.play("dying")
-
-func dying() -> void:
-	if sprite.animation == "dying": 
-		queue_free()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cskldvb6f2u0y"
-path="res://.godot/imported/BlueSlimeBorn-Sheet.png-a49c074768ff9c6e2153764de50c92b7.ctex"
+uid="uid://cn8yfxl55v0y1"
+path="res://.godot/imported/RedSlimeWalking-Sheet.png-3fbedfaa381f67ca6096ec9ef68e9373.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BlueSlime/BlueSlimeBorn-Sheet.png"
-dest_files=["res://.godot/imported/BlueSlimeBorn-Sheet.png-a49c074768ff9c6e2153764de50c92b7.ctex"]
+source_file="res://Assets/Sprites/RedSlime/RedSlimeWalking-Sheet.png"
+dest_files=["res://.godot/imported/RedSlimeWalking-Sheet.png-3fbedfaa381f67ca6096ec9ef68e9373.ctex"]
 
 [params]
 

@@ -180,7 +180,7 @@ collision_layer = 2
 collision_mask = 7
 platform_floor_layers = 4294967040
 script = ExtResource("1_7mxt8")
-speed = 50.0
+health = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821041065]
 shape = SubResource("CircleShape2D_yf5fn")
@@ -189,5 +189,3 @@ shape = SubResource("CircleShape2D_yf5fn")
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"attacking"
-
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animation_end"]
