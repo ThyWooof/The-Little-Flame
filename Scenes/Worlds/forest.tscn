@@ -6,7 +6,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_ntkhe"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 96, 156.01874, 0, 0, 0, 0, 263, 157.01498, 0, 0, 0, 0, 260, 427, 0, 0, 0, 0, 96, 425, 0, 0, 0, 0, 96, 156.01874)
+"points": PackedVector2Array(0, 0, 0, 0, 96, 156.01874, 0, 0, 0, 0, 263, 156.01875, 0, 0, 0, 0, 263, 427.00003, 0, 0, 0, 0, 96, 427.00003, 0, 0, 0, 0, 96, 156.01874)
 }
 point_count = 5
 
@@ -169,14 +169,13 @@ script = ExtResource("1_x3rlq")
 position = Vector2(180, 308)
 
 [node name="Path2D" type="Path2D" parent="Player" unique_id=547484318]
-position = Vector2(-189.74849, -284.7265)
-scale = Vector2(1.0598801, 0.98530793)
+position = Vector2(-189.17366, -284.7265)
+scale = Vector2(1.0538923, 0.98530793)
 curve = SubResource("Curve2D_ntkhe")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D" unique_id=822931028]
 unique_name_in_owner = true
 position = Vector2(96, 156.01874)
-rotation = 0.0059654764
 
 [node name="Timer" type="Timer" parent="." unique_id=1277783290]
 wait_time = 0.4
@@ -187,11 +186,14 @@ autostart = true
 [node name="TileMapLayer" type="TileMapLayer" parent="Map" unique_id=179033438]
 tile_set = SubResource("TileSet_g4v7s")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="Map" unique_id=1398569805]
+[node name="TileMapLayer2" type="TileMapLayer" parent="Map" unique_id=1953447608]
+tile_set = SubResource("TileSet_g4v7s")
 
-[node name="TileMapLayer3" type="TileMapLayer" parent="Map" unique_id=2107326977]
+[node name="TileMapLayer3" type="TileMapLayer" parent="Map" unique_id=766299382]
+tile_set = SubResource("TileSet_g4v7s")
 
-[node name="TileMapLayer4" type="TileMapLayer" parent="Map" unique_id=1619726918]
+[node name="TileMapLayer4" type="TileMapLayer" parent="Map" unique_id=568367460]
+tile_set = SubResource("TileSet_g4v7s")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=71662606]
 

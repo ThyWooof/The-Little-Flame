@@ -17,6 +17,7 @@ func taking_damage():
 func dying() -> void:
 	velocity = Vector2.ZERO
 	set_collision_layer_value(2, false)
+	set_collision_mask_value(1, false)
 	set_collision_mask_value(2, false)
 	if sprite.animation == "dying" and not sprite.is_playing(): 
 		queue_free()
