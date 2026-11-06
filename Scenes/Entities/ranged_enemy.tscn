@@ -180,6 +180,7 @@ collision_layer = 2
 collision_mask = 7
 platform_floor_layers = 4294967040
 script = ExtResource("1_ye5kd")
+min_distance = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821041065]
 shape = SubResource("CircleShape2D_yf5fn")

@@ -1,6 +1,6 @@
 extends Node2D
 
-func spawn_slime():
+func spawn_slime() -> void:
 	var new_slime = preload("res://Scenes/Entities/melee_enemy.tscn").instantiate()
 	
 	%PathFollow2D.progress_ratio = randf()

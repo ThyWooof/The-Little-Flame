@@ -226,11 +226,17 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 5.9060435
+
 [node name="Player" type="CharacterBody2D" unique_id=1529889726 groups=["player"]]
 collision_mask = 6
 platform_floor_layers = 4294967040
 script = ExtResource("1_nqm6o")
 speed = 75.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=592595952]
+zoom = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821041065]
 position = Vector2(-0.5, 3.5)
@@ -242,7 +248,19 @@ sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"idle"
 frame_progress = 0.7896974
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=592595952]
-zoom = Vector2(3, 3)
+[node name="HurtBox" type="Area2D" parent="." unique_id=377122078]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1948036275]
+position = Vector2(-0.4966774, 3.0697575)
+shape = SubResource("CircleShape2D_g4v7s")
+debug_color = Color(0.9999998, 0.016597096, 0.02019008, 0.41960785)
+
+[node name="Timer" type="Timer" parent="HurtBox" unique_id=184885151]
 
 [node name="DamageArea" parent="." unique_id=1931584909 instance=ExtResource("3_qbyki")]
+position = Vector2(-0.43178558, 3.7174368)
+
+[connection signal="timeout" from="HurtBox/Timer" to="." method="_on_timer_timeout"]
